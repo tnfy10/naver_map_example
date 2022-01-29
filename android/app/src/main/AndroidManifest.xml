@@ -1,8 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tnfy10.example.naver_map_example">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
    <application
         android:label="naver_map_example"
-        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -30,5 +34,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+       <!-- naver client id -->
+       <meta-data
+           android:name="com.naver.maps.map.CLIENT_ID"
+           android:value="${NAVER_CLIENT_ID}" />
     </application>
 </manifest>
